@@ -1,0 +1,234 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #6a11cb; 
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 90%;
+    transform: scale(1);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+  }
+  
+  .scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .player {
+    width: 45%;
+    text-align: center;
+  }
+  
+  .choice-display {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .choice-display:hover {
+    transform: scale(1.2) rotate(10deg);
+  }
+  
+  #player-score,
+  #computer-score {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .choice {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .choice:hover {
+    background: #2575fc;
+    color: white;
+    transform: scale(1.1) rotate(-5deg);
+  }
+  
+  .choice:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: opacity 0.3s ease;
+  }
+  
+  .choice:hover:before {
+    opacity: 0;
+  }
+  
+  .message {
+    color: #444;
+    margin-top: 15px;
+    font-style: italic;
+  }
+
+  .active {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal !important;
+  }
+  
+  #result-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: white;
+    text-align: center;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: modalFadeIn 0.5s ease-out forwards;
+  }
+  
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.6);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  #result-modal h2 {
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+  }
+  
+  .modal-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+  }
+  
+  .play-again {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .exit-game {
+    background: #f44336;
+    color: white;
+  }
+  
+  .play-again:hover {
+    background: #388e3c;
+  }
+  
+  .exit-game:hover {
+    background: #d32f2f;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+
+  .reset-button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background: #f44336;  
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;  
+  }
+  
+  .reset-button:hover {
+    background: #d32f2f;  
+    transform: scale(1.05);  
+  }
+  
+  #rock, #paper, #scissors {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
