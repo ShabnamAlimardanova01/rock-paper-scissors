@@ -232,3 +232,278 @@ body {
     font-weight: bold;
     color: #333;
   }
+
+/* Ümumi tərzlər (əsas dizayn) */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #6a11cb;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  width: 90%;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.player {
+  width: 45%;
+  text-align: center;
+}
+
+.choice-display {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.choice {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* @media (max-width: 768px) {
+  .container {
+    padding: 30px;
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .player {
+    width: 100%;
+  }
+
+  .choice-display {
+    font-size: 2.5rem;
+  }
+
+  .choices {
+    gap: 15px;
+  }
+
+  .choice {
+    width: 80px;
+    height: 80px;
+    font-size: 1.2rem;
+  }
+
+  .reset-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .choice-display {
+    font-size: 2rem;
+  }
+
+  .choices {
+    gap: 10px;
+  }
+
+  .choice {
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+
+  .reset-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+} */
+
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .player {
+    width: 100%;
+  }
+
+  .choice-display {
+    font-size: 2.5rem;
+  }
+
+  .choices {
+    gap: 15px;
+  }
+
+  .choice {
+    width: 90px;
+    height: 90px;
+    font-size: 1.3rem;
+  }
+
+  .reset-button {
+    width: auto;
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+}
+ 
+
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .choice-display {
+    font-size: 2rem;
+  }
+
+  .choices {
+    gap: 10px;
+  }
+
+  .choice {
+    width: 80px;
+    height: 80px;
+    font-size: 1.1rem;
+  }
+
+  .reset-button {
+    width: auto;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .choice-display {
+    font-size: 1.8rem;
+  }
+
+  .choices {
+    gap: 8px;
+  }
+
+  .choice {
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+
+  .reset-button {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
